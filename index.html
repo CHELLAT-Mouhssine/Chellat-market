@@ -2,85 +2,76 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>𝐶ʜ𝐄𝐿𝘓ᴀ𝘛 𝖲𝗧ᴏℜ</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <div id="side-menu" class="drawer">
+    <div id="sideMenu" class="side-drawer">
         <div class="drawer-header">
-            <h2 class="logo-font">𝐶ʜ𝐄𝐿𝘓ᴀ𝘛</h2>
+            <h3>𝐶ʜ𝐄𝐿𝘓ᴀ𝘛</h3>
             <i class="fas fa-times" onclick="toggleMenu()"></i>
         </div>
         <div class="drawer-content">
-            <a href="mailto:support@chellat.com" class="menu-item"><i class="fas fa-envelope"></i> الدعم الفني (Gmail)</a>
-            <a href="https://wa.me/212600000000" class="menu-item"><i class="fab fa-whatsapp"></i> تواصل عبر واتساب</a>
-            <div class="about-section">
+            <a href="mailto:support@chellat.com" class="menu-link"><i class="fas fa-envelope"></i> الدعم الفني (Gmail)</a>
+            <a href="https://wa.me/212600000000" class="menu-link"><i class="fab fa-whatsapp"></i> تواصل عبر واتساب</a>
+            <div class="about-box">
                 <h4><i class="fas fa-info-circle"></i> عن المتجر</h4>
-                <p>𝐶ʜ𝐄𝐿𝘓ᴀ𝘛 𝖲𝗧ᴏℜ هو منصتك الموثوقة لتحميل تطبيقات وألعاب 2026. نحن نضمن لك روابط آمنة وتجربة تصفح سريعة تحاكي كبرى المتاجر العالمية.</p>
+                <p>مرحباً بك في 𝐶ʜ𝐄𝐿𝘓ᴀ𝘛 𝖲𝗧ᴏℜ، المتجر الأذكى لتحميل التطبيقات والألعاب لعام 2026. نحن نوفر لك أحدث الإصدارات بروابط مباشرة وآمنة تماماً، مع واجهة مستخدم تحاكي Play Store لسهولة الوصول.</p>
             </div>
         </div>
     </div>
     <div id="overlay" onclick="toggleMenu()"></div>
 
-    <header class="app-bar">
-        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
-        <h1 class="main-logo">𝐶ʜ𝐄𝐿𝘓ᴀ𝘛 𝖲𝗧ᴏℜ</h1>
+    <header class="navbar">
+        <i class="fas fa-bars menu-btn" onclick="toggleMenu()"></i>
+        <h1 class="brand-logo">𝐶ʜ𝐄𝐿𝘓ᴀ𝘛 𝖲𝗧ᴏℜ</h1>
         <div style="width:24px"></div>
     </header>
 
-    <div class="search-container">
-        <div class="search-box">
+    <div class="search-section">
+        <div class="search-bar">
             <i class="fas fa-search"></i>
-            <input type="text" id="searchInput" onkeyup="searchApps()" placeholder="ابحث عن تطبيقك...">
+            <input type="text" id="appSearch" onkeyup="filterApps()" placeholder="ابحث عن تطبيق أو لعبة...">
         </div>
     </div>
 
-    <div class="hero-slider">
-        <div class="slide-item">
-            <div class="slide-info">
-                <i class="fas fa-graduation-cap"></i>
-                <h3>دليل التعليم والهجرة 2026</h3>
-                <p>اكتشف آفاقك التعليمية الآن</p>
-            </div>
+    <div class="promo-container">
+        <div class="slider-item">
+            <i class="fas fa-graduation-cap"></i>
+            <h2>دليل التعليم والهجرة 2026</h2>
+            <p>مستقبلك يبدأ من هنا</p>
         </div>
-    </div>
-
-    <div class="tabs">
-        <span class="tab active">شائع</span>
-        <span class="tab">تطبيقات</span>
-        <span class="tab">ألعاب</span>
     </div>
 
     <div class="apps-grid" id="appsList">
-        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1024px-WhatsApp.svg.png"></div><h3>WhatsApp</h3></a>
-        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png"></div><h3>Instagram</h3></a>
-        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1024px-Telegram_logo.svg.png"></div><h3>Telegram</h3></a>
-        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/1024px-Facebook_Messenger_logo_2020.svg.png"></div><h3>Messenger</h3></a>
-        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/1024px-TikTok_logo.svg.png"></div><h3>TikTok</h3></a>
-        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Snapchat_logo.svg/1024px-Snapchat_logo.svg.png"></div><h3>Snapchat</h3></a>
-        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1024px-ChatGPT_logo.svg.png"></div><h3>ChatGPT</h3></a>
-        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/1024px-Google_Gemini_logo.svg.png"></div><h3>Gemini</h3></a>
-        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Logo_2013_Google_Chrome.svg/1024px-Logo_2013_Google_Chrome.svg.png"></div><h3>Chrome</h3></a>
-        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Spotify_logo_without_text.svg/1024px-Spotify_logo_without_text.svg.png"></div><h3>Spotify</h3></a>
-        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Free_Fire_Logo.png/250px-Free_Fire_Logo.png"></div><h3>Free Fire</h3></a>
-        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Subway_Surfers_cover_art.png"></div><h3>Subway Surfers</h3></a>
-        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/en/3/39/EFootball_2022_Standard_Edition_Cover_Art.jpg"></div><h3>eFootball 2026</h3></a>
-    </div>
+        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"></div><h3>WhatsApp</h3></a>
+        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"></div><h3>Instagram</h3></a>
+        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"></div><h3>Telegram</h3></a>
+        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg"></div><h3>Messenger</h3></a>
+        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg"></div><h3>TikTok</h3></a>
+        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Snapchat_logo.svg"></div><h3>Snapchat</h3></a>
+        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"></div><h3>ChatGPT</h3></a>
+        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"></div><h3>Gemini</h3></a>
+        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google_Chrome.svg"></div><h3>Chrome</h3></a>
+        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"></div><h3>Spotify</h3></a>
+        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/en/3/3b/Free_Fire_Logo.png"></div><h3>Free Fire</h3></a>
+        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Subway_Surfers_cover_art.png"></div><h3>Subway Surfers</h3></a>
+        </div>
 
     <script>
         function toggleMenu() {
-            document.getElementById('side-menu').classList.toggle('open');
-            document.getElementById('overlay').classList.toggle('show');
+            document.getElementById('sideMenu').classList.toggle('active');
+            document.getElementById('overlay').classList.toggle('visible');
         }
-        function searchApps() {
-            let input = document.getElementById('searchInput').value.toLowerCase();
-            let cards = document.getElementsByClassName('app-card');
-            for (let i = 0; i < cards.length; i++) {
-                let name = cards[i].innerText.toLowerCase();
-                cards[i].style.display = name.includes(input) ? "flex" : "none";
+        function filterApps() {
+            let val = document.getElementById('appSearch').value.toLowerCase();
+            let items = document.getElementsByClassName('card');
+            for (let i = 0; i < items.length; i++) {
+                let text = items[i].innerText.toLowerCase();
+                items[i].style.display = text.includes(val) ? "flex" : "none";
             }
         }
     </script>
