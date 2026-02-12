@@ -9,69 +9,108 @@
 </head>
 <body>
 
-    <div id="sideMenu" class="side-drawer">
+    <div id="side-menu" class="drawer">
         <div class="drawer-header">
-            <h3>𝐶ʜ𝐄𝐿𝘓ᴀ𝘛</h3>
+            <h2 class="logo-font">𝐶ʜ𝐄𝐿𝘓ᴀ𝘛</h2>
             <i class="fas fa-times" onclick="toggleMenu()"></i>
         </div>
         <div class="drawer-content">
-            <a href="mailto:support@chellat.com" class="menu-link"><i class="fas fa-envelope"></i> الدعم الفني (Gmail)</a>
-            <a href="https://wa.me/212600000000" class="menu-link"><i class="fab fa-whatsapp"></i> تواصل عبر واتساب</a>
-            <div class="about-box">
+            <a href="mailto:support@chellat.com" class="menu-item"><i class="fas fa-envelope"></i> الدعم الفني (Gmail)</a>
+            <a href="https://wa.me/212600000000" class="menu-item"><i class="fab fa-whatsapp"></i> تواصل عبر واتساب</a>
+            <div class="about-section">
                 <h4><i class="fas fa-info-circle"></i> عن المتجر</h4>
-                <p>مرحباً بك في 𝐶ʜ𝐄𝐿𝘓ᴀ𝘛 𝖲𝗧ᴏℜ، المتجر الأذكى لتحميل التطبيقات والألعاب لعام 2026. نحن نوفر لك أحدث الإصدارات بروابط مباشرة وآمنة تماماً، مع واجهة مستخدم تحاكي Play Store لسهولة الوصول.</p>
+                <p>𝐶ʜ𝐄𝐿𝘓ᴀ𝘛 𝖲𝗧ᴏℜ هو وجهتك الأولى لتحميل أحدث التطبيقات والألعاب لعام 2026 بروابط آمنة وسريعة.</p>
             </div>
         </div>
     </div>
     <div id="overlay" onclick="toggleMenu()"></div>
 
-    <header class="navbar">
-        <i class="fas fa-bars menu-btn" onclick="toggleMenu()"></i>
-        <h1 class="brand-logo">𝐶ʜ𝐄𝐿𝘓ᴀ𝘛 𝖲𝗧ᴏℜ</h1>
+    <header class="app-bar">
+        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+        <h1 class="main-logo">𝐶ʜ𝐄𝐿𝘓ᴀ𝘛 𝖲𝗧ᴏℜ</h1>
         <div style="width:24px"></div>
     </header>
 
-    <div class="search-section">
-        <div class="search-bar">
+    <div class="search-container">
+        <div class="search-box">
             <i class="fas fa-search"></i>
-            <input type="text" id="appSearch" onkeyup="filterApps()" placeholder="ابحث عن تطبيق أو لعبة...">
+            <input type="text" id="searchInput" onkeyup="searchApps()" placeholder="ابحث عن تطبيقك...">
         </div>
     </div>
 
-    <div class="promo-container">
-        <div class="slider-item">
-            <i class="fas fa-graduation-cap"></i>
-            <h2>دليل التعليم والهجرة 2026</h2>
-            <p>مستقبلك يبدأ من هنا</p>
+    <div class="hero-slider">
+        <div class="slide-item">
+            <div class="slide-info">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>دليل التعليم والهجرة 2026</h3>
+                <p>اكتشف آفاقك التعليمية الآن</p>
+            </div>
         </div>
     </div>
 
     <div class="apps-grid" id="appsList">
-        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"></div><h3>WhatsApp</h3></a>
-        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"></div><h3>Instagram</h3></a>
-        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"></div><h3>Telegram</h3></a>
-        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg"></div><h3>Messenger</h3></a>
-        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg"></div><h3>TikTok</h3></a>
-        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Snapchat_logo.svg"></div><h3>Snapchat</h3></a>
-        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"></div><h3>ChatGPT</h3></a>
-        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Google_Gemini_logo.svg"></div><h3>Gemini</h3></a>
-        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_2013_Google_Chrome.svg"></div><h3>Chrome</h3></a>
-        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg"></div><h3>Spotify</h3></a>
-        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/en/3/3b/Free_Fire_Logo.png"></div><h3>Free Fire</h3></a>
-        <a href="#" class="card"><div class="icon"><img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Subway_Surfers_cover_art.png"></div><h3>Subway Surfers</h3></a>
-        </div>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/124/124034.png"></div><h3>WhatsApp</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png"></div><h3>Instagram</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"></div><h3>Telegram</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968771.png"></div><h3>Messenger</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"></div><h3>TikTok</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/174/174870.png"></div><h3>Snapchat</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/124/124021.png"></div><h3>Twitter (X)</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/174/174848.png"></div><h3>Facebook</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"></div><h3>YouTube</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/3938/3938027.png"></div><h3>Threads</h3></a>
+
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn.oaistatic.com/_next/static/media/apple-touch-icon.82af6fe1.png"></div><h3>ChatGPT</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304efad05e2444d4.svg"></div><h3>Gemini</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/281/281764.png"></div><h3>Gmail</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"></div><h3>Google</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/300/300221.png"></div><h3>Chrome</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/854/854878.png"></div><h3>Maps</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://img.icons8.com/color/512/canva.png"></div><h3>Canva</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://img.icons8.com/color/512/adobe-lightroom.png"></div><h3>Lightroom</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968423.png"></div><h3>Drive</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/270/270792.png"></div><h3>Translate</h3></a>
+
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/174/174872.png"></div><h3>Spotify</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968812.png"></div><h3>Pinterest</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/5969/5969020.png"></div><h3>Discord</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968666.png"></div><h3>Shopify</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://img.icons8.com/color/512/netflix.png"></div><h3>Netflix</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://img.icons8.com/color/512/amazon.png"></div><h3>Amazon</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://img.icons8.com/color/512/shopee.png"></div><h3>Shopee</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://img.icons8.com/color/512/aliexpress.png"></div><h3>AliExpress</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://img.icons8.com/color/512/shein.png"></div><h3>SHEIN</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111728.png"></div><h3>Zoom</h3></a>
+
+        <a href="#" class="app-card"><div class="img-box" style="background:#2b2b2b; color:white; font-size:30px;">⚽</div><h3>Koora</h3></a>
+        <a href="#" class="app-card"><div class="img-box" style="background:#e74c3c; color:white; font-size:30px;">🔥</div><h3>Free Fire</h3></a>
+        <a href="#" class="app-card"><div class="img-box" style="background:#27ae60; color:white; font-size:30px;">🕌</div><h3>Salat First</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://img.icons8.com/color/512/pubg.png"></div><h3>PUBG</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://img.icons8.com/color/512/minecraft.png"></div><h3>Minecraft</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://img.icons8.com/color/512/roblox-app.png"></div><h3>Roblox</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://img.icons8.com/color/512/clash-of-clans.png"></div><h3>Clash of Clans</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://img.icons8.com/color/512/subway-surfers.png"></div><h3>Subway Surfers</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://img.icons8.com/color/512/candy-crush-saga.png"></div><h3>Candy Crush</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://img.icons8.com/color/512/ludo-king.png"></div><h3>Ludo King</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/5969/5969117.png"></div><h3>Reddit</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111615.png"></div><h3>Quora</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968933.png"></div><h3>CapCut</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://img.icons8.com/color/512/picsart.png"></div><h3>PicsArt</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://cdn-icons-png.flaticon.com/512/5969/5969116.png"></div><h3>Twitch</h3></a>
+        <a href="#" class="app-card"><div class="img-box" style="background:#34495e; color:white; font-size:30px;">🛡️</div><h3>AdGuard</h3></a>
+    </div>
 
     <script>
         function toggleMenu() {
-            document.getElementById('sideMenu').classList.toggle('active');
-            document.getElementById('overlay').classList.toggle('visible');
+            document.getElementById('side-menu').classList.toggle('open');
+            document.getElementById('overlay').classList.toggle('show');
         }
-        function filterApps() {
-            let val = document.getElementById('appSearch').value.toLowerCase();
-            let items = document.getElementsByClassName('card');
-            for (let i = 0; i < items.length; i++) {
-                let text = items[i].innerText.toLowerCase();
-                items[i].style.display = text.includes(val) ? "flex" : "none";
+        function searchApps() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('app-card');
+            for (let i = 0; i < cards.length; i++) {
+                let name = cards[i].innerText.toLowerCase();
+                cards[i].style.display = name.includes(input) ? "flex" : "none";
             }
         }
     </script>
