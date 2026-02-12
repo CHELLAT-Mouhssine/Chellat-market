@@ -1,32 +1,39 @@
 body { margin: 0; padding: 0; font-family: sans-serif; background: #fff; direction: rtl; }
 .main-header { background: #2ecc71; color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-.logo-text { font-family: cursive; font-size: 22px; margin: 0; }
+.decorative-logo { font-size: 24px; margin: 0; font-weight: bold; }
 .search-section { background: #2ecc71; padding: 0 15px 15px; }
-.search-section input { width: 100%; padding: 12px; border-radius: 25px; border: none; text-align: center; outline: none; }
+.search-section input { width: 100%; padding: 12px; border-radius: 25px; border: none; text-align: center; outline: none; box-sizing: border-box; }
 
-/* الـ Slider */
 .main-banner { padding: 15px; }
 .banner-box { background: #2ecc71; border-radius: 20px; height: 130px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; box-shadow: 0 4px 15px rgba(46,204,113,0.2); }
 .banner-emoji { font-size: 40px; }
 
-.nav-tabs { display: flex; justify-content: space-around; padding: 10px 0; border-bottom: 1px solid #eee; }
-.tab.active { color: #2ecc71; border-bottom: 3px solid #2ecc71; padding-bottom: 5px; }
+.nav-tabs { display: flex; justify-content: space-around; padding: 10px 0; border-bottom: 1px solid #eee; margin-bottom: 10px; }
+.tab.active { color: #2ecc71; border-bottom: 3px solid #2ecc71; font-weight: bold; }
 
-/* الأيقونات الدائرية الصغيرة */
-.apps-grid-view { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 10px; padding: 20px; justify-items: center; }
+/* إصلاح الجانب الأيمن والأيقونات الدائرية */
+.apps-grid-view { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; 
+    padding: 10px; 
+    justify-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
 .app-card-item { text-decoration: none; color: #333; text-align: center; display: flex; flex-direction: column; align-items: center; width: 100%; }
 .app-card-item img, .placeholder-icon { 
     width: 65px !important; 
     height: 65px !important; 
-    border-radius: 50% !important; /* لجعلها دائرية تماماً */
+    border-radius: 50% !important; /* دائرية تماماً */
     object-fit: cover; 
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    background: #f9f9f9;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-.app-card-item h3 { font-size: 11px; margin-top: 8px; font-weight: 500; width: 80px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.placeholder-icon { background: #34495e; color: white; display: flex; align-items: center; justify-content: center; font-size: 30px; }
+.app-card-item h3 { font-size: 11px; margin-top: 8px; font-weight: 500; width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* القائمة الجانبية */
-#side-menu { position: fixed; right: -250px; top: 0; width: 250px; height: 100%; background: white; transition: 0.3s; z-index: 2000; box-shadow: -2px 0 10px rgba(0,0,0,0.1); }
+#side-menu { position: fixed; right: -280px; top: 0; width: 280px; height: 100%; background: white; transition: 0.3s; z-index: 2000; box-shadow: -2px 0 10px rgba(0,0,0,0.1); }
 #side-menu.open { right: 0; }
-.menu-header { background: #2ecc71; color: white; padding: 20px; display: flex; justify-content: space-between; }
-.menu-item { display: block; padding: 15px; border-bottom: 1px solid #eee; text-decoration: none; color: #333; }
+.menu-header { background: #2ecc71; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+.menu-item { display: block; padding: 15px 25px; border-bottom: 1px solid #eee; text-decoration: none; color: #333; font-weight: 500; }
