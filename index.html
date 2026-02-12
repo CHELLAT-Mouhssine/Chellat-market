@@ -2,36 +2,49 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>𝐶ʜ𝐄𝐿𝘓ᴀ𝘛 𝖲𝗧ᴏℜ</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+
     <header class="app-bar">
         <h1 class="main-logo">𝐶ʜ𝐄𝐿𝘓ᴀ𝘛 𝖲𝗧ᴏℜ</h1>
     </header>
 
     <div class="search-section">
-        <input type="text" id="searchInput" onkeyup="searchApps()" placeholder="ابحث عن تطبيقك...">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" onkeyup="searchApps()" placeholder="ابحث عن التطبيقات...">
+        </div>
+    </div>
+
+    <div class="hero-container">
+        <div class="hero-card">
+            <div class="hero-text">
+                <h3>دليل التعليم والهجرة 2026</h3>
+                <p>بوابتك نحو المستقبل</p>
+            </div>
+            <i class="fas fa-graduation-cap"></i>
+        </div>
     </div>
 
     <div class="apps-grid" id="appsList">
-        <a href="#" class="app-card">
-            <div class="img-box"><img src="imgs/whatsapp.png"></div>
-            <h3>WhatsApp</h3>
-        </a>
-        <a href="#" class="app-card">
-            <div class="img-box"><img src="imgs/freefire.png"></div>
-            <h3>Free Fire</h3>
-        </a>
-        <a href="#" class="app-card">
-            <div class="img-box"><img src="imgs/instagram.png"></div>
-            <h3>Instagram</h3>
-        </a>
-        <a href="#" class="app-card">
-            <div class="img-box"><img src="imgs/efootball.png"></div>
-            <h3>eFootball 2026</h3>
-        </a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"></div><h3>WhatsApp</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"></div><h3>Instagram</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"></div><h3>Telegram</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg"></div><h3>Messenger</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/en/a/ad/Snapchat_logo.svg"></div><h3>Snapchat</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/en/a/a9/TikTok_logo.svg"></div><h3>TikTok</h3></a>
+
+        <a href="#" class="app-card"><div class="img-box"><img src="https://play-lh.googleusercontent.com/978G6Y69_W2yTzQ_199A6xRAn9H0V4hI_fF8mS_Jv1L8F2V_N_A8_F1_N_A8_F1_N_A8"></div><h3>Free Fire</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://play-lh.googleusercontent.com/65-m39XmX9X9X9X9X9X9X9X9X9X9X9X9X9X9X9X9"></div><h3>eFootball 2026</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/en/b/b5/Subway_Surfers_App_Icon.png"></div><h3>Subway Surfers</h3></a>
+
+        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Google_Chrome_icon_%28September_2014%29.svg"></div><h3>Chrome</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg"></div><h3>ChatGPT</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304efad05e2444d4.svg"></div><h3>Gemini</h3></a>
     </div>
 
     <script>
