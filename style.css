@@ -1,59 +1,52 @@
-:root { --main: #2ecc71; --bg: #fdfdfd; }
-body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: var(--bg); direction: rtl; }
+:root { --green: #2ecc71; --white: #ffffff; --bg: #fcfcfc; }
+body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg); direction: rtl; overflow-x: hidden; }
 
 /* الهيدر */
-.app-bar { background: var(--main); color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-.main-logo { font-size: 18px; font-weight: bold; margin: 0; letter-spacing: 0.5px; }
+.navbar { background: var(--green); color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+.brand-logo { font-size: 18px; font-weight: bold; margin: 0; }
+.menu-btn { font-size: 22px; cursor: pointer; }
 
 /* البحث */
-.search-container { background: var(--main); padding: 0 15px 15px; }
-.search-box { background: white; border-radius: 8px; padding: 10px 15px; display: flex; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-.search-box input { border: none; width: 100%; outline: none; margin-right: 10px; font-size: 14px; color: #333; }
+.search-section { background: var(--green); padding: 0 15px 15px; }
+.search-bar { background: white; border-radius: 8px; padding: 10px 15px; display: flex; align-items: center; }
+.search-bar input { border: none; width: 100%; outline: none; margin-right: 10px; font-size: 14px; text-align: right; }
 
-/* السلايدر المتوسط */
-.hero-slider { padding: 15px 15px 5px; }
-.slide-item {
+/* السلايدر المتوسط (مثل APKPure) */
+.promo-container { padding: 15px; }
+.slider-item {
     background: linear-gradient(135deg, #2ecc71, #27ae60);
-    height: 115px; 
-    border-radius: 12px;
-    display: flex; align-items: center; justify-content: center;
-    color: white; box-shadow: 0 4px 10px rgba(46, 204, 113, 0.2);
+    height: 110px; border-radius: 12px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: white; box-shadow: 0 4px 15px rgba(46, 204, 113, 0.2);
 }
-.slide-info { text-align: center; }
-.slide-info i { font-size: 28px; }
-.slide-info h3 { margin: 5px 0 2px; font-size: 16px; }
-.slide-info p { margin: 0; font-size: 11px; opacity: 0.85; }
+.slider-item i { font-size: 28px; margin-bottom: 5px; }
+.slider-item h2 { font-size: 16px; margin: 0; }
+.slider-item p { font-size: 11px; margin: 2px 0 0; opacity: 0.9; }
 
-/* التبويبات */
-.tabs { display: flex; gap: 10px; padding: 10px 15px; }
-.tab { padding: 6px 16px; border: 1px solid #ddd; border-radius: 5px; font-size: 13px; color: #555; background: white; }
-.tab.active { background: #f0f0f0; border-color: #ccc; font-weight: bold; }
+/* شبكة التطبيقات (النسق الجميل) */
+.apps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 10px; padding: 15px; }
+.card { text-decoration: none; color: #333; display: flex; flex-direction: column; align-items: center; }
 
-/* شبكة التطبيقات - النسق الجميل */
-.apps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px 12px; padding: 15px; }
-.app-card { text-decoration: none; color: #333; display: flex; flex-direction: column; align-items: center; }
-
-/* ضبط الأيقونات لتكون مثل Play Store */
-.img-box {
+/* حل مشكلة الأيقونات - السر في الـ padding والـ contain */
+.icon {
     width: 72px; height: 72px; 
-    border-radius: 18px; /* زوايا منحنية احترافية وليست دائرة كاملة مثل Play Store */
+    border-radius: 18px; /* مثل Play Store بالضبط */
     background: white; 
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    display: flex; align-items: center; justify-content: center; 
-    overflow: hidden; 
-    padding: 8px; /* هذا هو السر: مساحة بيضاء حول اللوجو ليكون متناسقاً */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    display: flex; align-items: center; justify-content: center;
+    padding: 10px; /* يمنع اللوجو من ملامسة الحواف ويجعله جميلاً */
     box-sizing: border-box;
     border: 1px solid #f0f0f0;
 }
-.img-box img { width: 100%; height: 100%; object-fit: contain; } /* لضمان عدم ضياع ملامح اللوجو */
+.icon img { width: 100%; height: 100%; object-fit: contain; } /* يحافظ على أبعاد اللوجو */
 
-.app-card h3 { font-size: 11px; margin-top: 10px; font-weight: 600; text-align: center; color: #444; width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.card h3 { font-size: 11px; margin-top: 10px; font-weight: 600; text-align: center; }
 
-/* القائمة الجانبية */
-.drawer { position: fixed; right: -280px; top: 0; width: 280px; height: 100%; background: white; z-index: 2001; transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-.drawer.open { right: 0; }
-.drawer-header { background: var(--main); color: white; padding: 25px 20px; display: flex; justify-content: space-between; align-items: center; }
-.menu-item { display: block; padding: 16px 20px; border-bottom: 1px solid #f5f5f5; text-decoration: none; color: #333; font-size: 14px; font-weight: 500; }
-.about-section { padding: 25px 20px; font-size: 13px; color: #777; line-height: 1.6; }
+/* القائمة الجانبية المتقدمة */
+.side-drawer { position: fixed; right: -280px; top: 0; width: 280px; height: 100%; background: white; z-index: 2001; transition: 0.3s; box-shadow: -5px 0 15px rgba(0,0,0,0.1); }
+.side-drawer.active { right: 0; }
+.drawer-header { background: var(--green); color: white; padding: 25px 20px; display: flex; justify-content: space-between; align-items: center; }
+.menu-link { display: block; padding: 15px 20px; border-bottom: 1px solid #eee; text-decoration: none; color: #333; font-weight: 500; }
+.about-box { padding: 20px; color: #777; font-size: 13px; line-height: 1.6; }
 #overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); display: none; z-index: 2000; }
-#overlay.show { display: block; }
+#overlay.visible { display: block; }
