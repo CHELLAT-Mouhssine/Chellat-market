@@ -8,48 +8,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">CHELLAT<span>STORY</span></div>
-            <div class="search-bar">
-                <input type="text" placeholder="ابحث عن تطبيقك المفضل...">
-                <button><i class="fas fa-search"></i></button>
-            </div>
-        </nav>
+    <header class="main-header">
+        <i class="fas fa-bars menu-icon"></i>
+        <h1>Chellat-story</h1>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>أفضل التطبيقات والخدمات بين يديك</h1>
-            <p>اختر، حمل، واستمتع بتجربة فريدة مع متجرنا الجديد</p>
-        </section>
+    <div class="search-section">
+        <input type="text" placeholder="ابحث عن تطبيقك المفضل...">
+    </div>
 
-        <section class="apps-grid">
-            <div class="app-card">
-                <div class="app-icon green-shadow"><i class="fab fa-facebook-f"></i></div>
-                <h3>Facebook Pro</h3>
-                <p>نسخة معدلة بمميزات حصرية</p>
-                <a href="#" class="download-btn">تحميل الآن</a>
-            </div>
+    <div class="main-banner">
+        <div class="banner-box">
+            <span class="banner-emoji">🎓</span>
+            <h2>دليل التعليم والهجرة</h2>
+        </div>
+    </div>
 
-            <div class="app-card">
-                <div class="app-icon green-shadow"><i class="fas fa-robot"></i></div>
-                <h3>Blackbox AI</h3>
-                <p>مساعدك الذكي للبرمجة</p>
-                <a href="#" class="download-btn">تحميل الآن</a>
-            </div>
+    <nav class="nav-tabs">
+        <div class="tab active">شائع</div>
+        <div class="tab">تطبيقات</div>
+        <div class="tab">ألعاب</div>
+    </nav>
 
-            <div class="app-card">
-                <div class="app-icon green-shadow"><i class="fas fa-code"></i></div>
-                <h3>Dev Tools</h3>
-                <p>أدوات المطورين المحترفين</p>
-                <a href="#" class="download-btn">تحميل الآن</a>
-            </div>
-        </section>
-    </main>
+    <div class="apps-grid-view">
+        <div class="app-card-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook">
+            <h3>Facebook</h3>
+            <p class="app-rating">4.5 ⭐</p>
+            <p class="app-size">MB 65</p>
+        </div>
 
-    <footer>
-        <p>جميع الحقوق محفوظة &copy; 2026 Chellat Story</p>
-    </footer>
+        <div class="app-card-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2V_0B_vO7O9O7Wn9v5vJ8L8n8vX1V2X3X4A&s" alt="Blackbox AI">
+            <h3>Blackbox AI</h3>
+            <p class="app-rating">4.9 ⭐</p>
+            <p class="app-size">MB 22</p>
+        </div>
+
+        <div class="app-card-item">
+            <div class="placeholder-icon">🎓</div>
+            <h3>التعليم والهجرة</h3>
+            <p class="app-rating">4.8 ⭐</p>
+            <p class="app-size">MB 18</p>
+        </div>
+    </div>
 </body>
 </html>
