@@ -10,66 +10,41 @@
 <body>
 
     <header class="app-bar">
+        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
         <h1 class="main-logo">𝐶ʜ𝐄𝐿𝘓ᴀ𝘛 𝖲𝗧ᴏℜ</h1>
+        <div style="width:24px"></div>
     </header>
 
-    <div class="search-section">
+    <div class="search-container">
         <div class="search-box">
             <i class="fas fa-search"></i>
-            <input type="text" id="searchInput" onkeyup="searchApps()" placeholder="ابحث عن التطبيقات والألعاب...">
+            <input type="text" id="searchInput" onkeyup="searchApps()" placeholder="ابحث عن تطبيقك...">
         </div>
     </div>
 
-    <div class="hero-container">
-        <div class="hero-card">
-            <div class="hero-text">
+    <div class="hero-slider">
+        <div class="slide-item">
+            <div class="slide-info">
+                <i class="fas fa-graduation-cap"></i>
                 <h3>دليل التعليم والهجرة 2026</h3>
-                <p>بوابتك نحو المستقبل</p>
+                <p>مستقبلك يبدأ من هنا</p>
             </div>
-            <i class="fas fa-graduation-cap"></i>
         </div>
     </div>
 
     <div class="apps-grid" id="appsList">
+        <a href="#" class="app-card"><div class="img-box"><img src="https://image.winudf.com/v2/image1/Y29tLndoYXRzYXBwX2ljb25fMTcwOTU5Nzc3NF8wNTQ/icon.png?w=170&fakeurl=1"></div><h3>WhatsApp</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://image.winudf.com/v2/image1/Y29tLmluc3RhZ3JhbS5hbmRyb2lkX2ljb25fMTcxMTM1NTY0Nl8wNjg/icon.png?w=170&fakeurl=1"></div><h3>Instagram</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://image.winudf.com/v2/image1/b3JnLntelegramLm1lc3Nlbmdlcl9pY29uXzE3MDk1OTE0NTVfMDg2/icon.png?w=170&fakeurl=1"></div><h3>Telegram</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://image.winudf.com/v2/image1/Y29tLmZhY2Vib29rLm9yY2FfaWNvbl8xNzA5NTk4NTY4XzA2NQ/icon.png?w=170&fakeurl=1"></div><h3>Messenger</h3></a>
         
-        <a href="#" class="app-card">
-            <div class="img-container"><img src="https://image.winudf.com/v2/image1/Y29tLndoYXRzYXBwX2ljb25fMTcwOTU5Nzc3NF8wNTQ/icon.png?w=180&fakeurl=1" alt="WhatsApp"></div>
-            <h3>WhatsApp</h3>
-        </a>
-        <a href="#" class="app-card">
-            <div class="img-container"><img src="https://image.winudf.com/v2/image1/Y29tLmluc3RhZ3JhbS5hbmRyb2lkX2ljb25fMTcxMTM1NTY0Nl8wNjg/icon.png?w=180&fakeurl=1" alt="Instagram"></div>
-            <h3>Instagram</h3>
-        </a>
-        <a href="#" class="app-card">
-            <div class="img-container"><img src="https://image.winudf.com/v2/image1/b3JnLntelegramLm1lc3Nlbmdlcl9pY29uXzE3MDk1OTE0NTVfMDg2/icon.png?w=180&fakeurl=1" alt="Telegram"></div>
-            <h3>Telegram</h3>
-        </a>
-
-        <a href="#" class="app-card">
-            <div class="img-container"><img src="https://image.winudf.com/v2/image1/Y29tLmR0cy5mcmVlZmlyZXRoX2ljb25fMTcyMzg1NjQyNF8wMTk/icon.png?w=180&fakeurl=1" alt="Free Fire"></div>
-            <h3>Free Fire</h3>
-        </a>
-        <a href="#" class="app-card">
-            <div class="img-container"><img src="https://image.winudf.com/v2/image1/anAuY29uYW1pLnBlc2FtX2ljb25fMTcyMDU2Mjc1MV8wMTY/icon.png?w=180&fakeurl=1" alt="eFootball"></div>
-            <h3>eFootball™</h3>
-        </a>
-        <a href="#" class="app-card">
-            <div class="img-container"><img src="https://image.winudf.com/v2/image1/Y29tLmtpbGxvby5zdWJ3YXlzdXJmZXJzX2ljb25fMTcwOTU5NzgyN18wODA/icon.png?w=180&fakeurl=1" alt="Subway Surfers"></div>
-            <h3>Subway Surfers</h3>
-        </a>
-
-        <a href="#" class="app-card">
-            <div class="img-container"><img src="https://image.winudf.com/v2/image1/Y29tLmFuZHJvaWQuY2hyb21lX2ljb25fMTcwOTU5NzgxNV8wMjA/icon.png?w=180&fakeurl=1" alt="Chrome"></div>
-            <h3>Chrome</h3>
-        </a>
-        <a href="#" class="app-card">
-            <div class="img-container"><img src="https://image.winudf.com/v2/image1/Y29tLnNuYXBjaGF0LmFuZHJvaWRfaWNvbl8xNzA5NTk3ODE3XzA0MA/icon.png?w=180&fakeurl=1" alt="Snapchat"></div>
-            <h3>Snapchat</h3>
-        </a>
-        <a href="#" class="app-card">
-            <div class="img-container"><img src="https://image.winudf.com/v2/image1/Y29tLm9wZW5haS5jaGF0Z3B0X2ljb25fMTcwOTU5NzgyNl8wNzk/icon.png?w=180&fakeurl=1" alt="ChatGPT"></div>
-            <h3>ChatGPT</h3>
-        </a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://image.winudf.com/v2/image1/Y29tLmR0cy5mcmVlZmlyZXRoX2ljb25fMTcyMzg1NjQyNF8wMTk/icon.png?w=170&fakeurl=1"></div><h3>Free Fire</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://image.winudf.com/v2/image1/jp.konami.pesam_ic2026.png?w=170&fakeurl=1"></div><h3>eFootball 2026</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://image.winudf.com/v2/image1/Y29tLmtpbGxvby5zdWJ3YXlzdXJmZXJzX2ljb25fMTcwOTU5NzgyN18wODA/icon.png?w=170&fakeurl=1"></div><h3>Subway Surfers</h3></a>
+        
+        <a href="#" class="app-card"><div class="img-box"><img src="https://image.winudf.com/v2/image1/Y29tLmFuZHJvaWQuY2hyb21lX2ljb25fMTcwOTU5NzgxNV8wMjA/icon.png?w=170&fakeurl=1"></div><h3>Chrome</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://image.winudf.com/v2/image1/Y29tLm9wZW5haS5jaGF0Z3B0X2ljb25fMTcwOTU5NzgyNl8wNzk/icon.png?w=170&fakeurl=1"></div><h3>ChatGPT</h3></a>
+        <a href="#" class="app-card"><div class="img-box"><img src="https://image.winudf.com/v2/image1/Y29tLnNuYXBjaGF0LmFuZHJvaWRfaWNvbl8xNzA5NTk3ODE3XzA0MA/icon.png?w=170&fakeurl=1"></div><h3>Snapchat</h3></a>
     </div>
 
     <script>
