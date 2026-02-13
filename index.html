@@ -5,65 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chellat Store</title>
     <style>
-        :root { --primary-blue: #007bff; --bg-gray: #f4f7f6; }
-        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-gray); margin: 0; padding: 0; }
+        :root {
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --primary-blue: #007bff;
+        }
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --card-bg: #2d2d2d;
+            --text-color: #f0f0f0;
+        }
+        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg-gray); color: var(--text-color); margin: 0; padding-bottom: 70px; transition: 0.3s; background: var(--bg-color); }
         
-        /* الهيدر والقائمة الجانبية */
-        header { background: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); sticky: top; z-index: 100; }
-        .logo { font-size: 20px; font-weight: bold; color: #333; }
+        /* Header */
+        header { background: var(--card-bg); padding: 15px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); sticky: top; }
         .menu-icon { font-size: 24px; cursor: pointer; }
 
-        /* السلايدر (Slider) */
-        .slider { width: 95%; height: 180px; margin: 15px auto; background: #ddd; border-radius: 15px; overflow: hidden; position: relative; }
-        .slider-content { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(45deg, #007bff, #00c6ff); color: white; font-weight: bold; }
+        /* Slider */
+        .slider-container { width: 90%; height: 140px; margin: 10px auto; border-radius: 15px; overflow: hidden; position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .slides { display: flex; width: 300%; height: 100%; animation: slideAnim 10s infinite; }
+        .slide { width: 100%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: white; }
+        @keyframes slideAnim { 0%, 30% { transform: translateX(0); } 33%, 63% { transform: translateX(100%); } 66%, 100% { transform: translateX(200%); } }
 
-        /* مربع البحث */
+        /* Search & Categories */
         .search-container { padding: 10px 20px; }
-        .search-box { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 25px; outline: none; text-align: center; font-size: 16px; }
+        .search-box { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 25px; outline: none; text-align: center; background: var(--card-bg); color: var(--text-color); }
+        .categories { display: flex; justify-content: center; gap: 10px; margin-bottom: 10px; }
+        .cat-btn { padding: 5px 15px; border-radius: 15px; background: var(--primary-blue); color: white; font-size: 12px; border: none; cursor: pointer; }
 
-        /* شبكة التطبيقات (3 تطبيقات في الصف) */
+        /* App Grid */
         .app-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 15px; }
-        .app-card { background: white; border-radius: 15px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
-        .app-card img { width: 65px; height: 65px; border-radius: 15px; object-fit: cover; margin-bottom: 8px; }
-        .app-card h3 { font-size: 12px; margin: 5px 0; color: #333; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .download-btn { background: var(--primary-blue); color: white; text-decoration: none; padding: 6px 0; border-radius: 8px; font-size: 11px; display: block; width: 100%; font-weight: bold; }
+        .app-card { background: var(--card-bg); border-radius: 15px; padding: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .app-card img { width: 60px; height: 60px; border-radius: 12px; object-fit: cover; }
+        .app-card h3 { font-size: 11px; margin: 5px 0; color: var(--text-color); }
+        .download-btn { background: var(--primary-blue); color: white; text-decoration: none; padding: 6px 0; border-radius: 8px; font-size: 10px; display: block; font-weight: bold; }
 
-        /* تنسيق بسيط للقائمة الجانبية (مخفية حالياً) */
-        #side-menu { display: none; /* ستحتاج جافاسكريبت لفتحها */ }
+        /* Footer */
+        footer { position: fixed; bottom: 0; width: 100%; background: var(--card-bg); display: flex; justify-content: space-around; padding: 10px 0; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); }
+        .footer-item { font-size: 20px; cursor: pointer; color: var(--text-color); }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">Chellat Store</div>
-        <div class="menu-icon" onclick="alert('Gmail: your@email.com\nWhatsapp: +123456\nAbout: متجر شيلات الحصري')">≡</div>
+        <div style="display: flex; gap: 15px; align-items: center;">
+            <span onclick="toggleDarkMode()" style="cursor:pointer; font-size: 20px;">🌙</span>
+            <div class="menu-icon" onclick="openMenu()">≡</div>
+        </div>
     </header>
 
-    <div class="slider">
-        <div class="slider-content">شاشة العرض (Slider) - عروض حصرية</div>
+    <div class="slider-container">
+        <div class="slides">
+            <div class="slide" style="background: #ff4757;">ألعاب جديدة وحصرية</div>
+            <div class="slide" style="background: #2ed573;">تطبيقات معدلة 2026</div>
+            <div class="slide" style="background: #1e90ff;">عروض شيلات ستور</div>
+        </div>
     </div>
 
     <div class="search-container">
-        <input type="text" class="search-box" placeholder="البحث عن تطبيقات وألعاب...">
+        <input type="text" id="searchInput" class="search-box" placeholder="ابحث عن تطبيقك..." onkeyup="searchApp()">
+        <div id="searchResult" style="text-align:center; font-size:12px; margin-top:5px; color:red;"></div>
     </div>
 
-    <div class="app-grid">
-        <div class="app-card">
+    <div class="categories">
+        <button class="cat-btn">ألعاب</button>
+        <button class="cat-btn">برامج</button>
+        <button class="cat-btn">أدوات</button>
+    </div>
+
+    <div class="app-grid" id="appGrid">
+        <div class="app-card" data-name="facebook">
             <img src="facebook_lite.jpg" alt="FB">
             <h3>Facebook</h3>
             <a href="#" class="download-btn">تحميل</a>
         </div>
-        <div class="app-card">
+        <div class="app-card" data-name="capcut">
             <img src="CapCut%20.jpg" alt="CapCut">
             <h3>CapCut</h3>
             <a href="#" class="download-btn">تحميل</a>
         </div>
-        <div class="app-card">
-            <img src="Canva.jpg" alt="Canva">
-            <h3>Canva</h3>
-            <a href="#" class="download-btn">تحميل</a>
-        </div>
         </div>
 
+    <footer>
+        <div class="footer-item">🏠</div>
+        <div class="footer-item">⭐</div>
+        <div class="footer-item">⚙️</div>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        function openMenu() {
+            alert("للتواصل معنا:\nEmail: m.chellat@gmail.com\nWhatsapp: +212600000000\nنبذة: متجرك الأول لتطبيقات الهاتف المعدلة.");
+        }
+
+        function searchApp() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('app-card');
+            let found = false;
+            let resultText = document.getElementById('searchResult');
+
+            for (let card of cards) {
+                if (card.getAttribute('data-name').includes(input)) {
+                    card.style.display = "";
+                    found = true;
+                } else {
+                    card.style.display = "none";
+                }
+            }
+
+            if (!found && input !== "") {
+                resultText.innerText = "سيتم إضافته قريباً";
+            } else {
+                resultText.innerText = "";
+            }
+        }
+    </script>
 </body>
 </html>
